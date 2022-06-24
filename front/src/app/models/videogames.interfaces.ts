@@ -6,5 +6,4 @@ export interface VideogamesInterface {
     platform: string[];
     year: number;
     genre: string;
-    
 }
