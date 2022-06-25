@@ -13,7 +13,7 @@ export class NavigatorComponent implements OnInit {
   constructor() {
     this.navbarInfo={
       logo:{
-        src:"../../../assets/icons",
+        src:"../../../assets/iconsHeader",
         alt:"lcons"
       },
       links:[{
