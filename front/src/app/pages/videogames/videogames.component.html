@@ -1,1 +1,13 @@
-<p>videogames works!</p>
+<section>
+    <h2>Videogames</h2>
+    <div *ngIf="videogamesList.length">
+      <!-- Intentad componentizar este figure para utilizar solamente un <app-figure> en vez de todo este codigo -->
+      <figure *ngFor="let videogames of videogamesList">
+        <h4>{{ videogames.title }}</h4>
+        <h5>{{ videogames.year }}</h5>
+        <img src="{{ videogames.cover }}" alt="{{ videogames.title }}" />
+        <p>Company: {{ videogames.company }}</p>
+      </figure>
+    </div>
+  </section>
+  
