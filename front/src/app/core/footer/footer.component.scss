@@ -1,0 +1,80 @@
+.footer {
+  box-sizing: content-box;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #434544;
+  bottom: 0;
+  height: 10vh;
+  width: 100vw;
+}
+
+.card-collection {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  gap: 150px;
+}
+
+.personal-card {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% / 3 - 20px);
+}
+
+.personal-image {
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  padding-right: 10px;
+  & img {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #434544;
+  }
+}
+.personal-info {
+  text-align: center;
+  margin-left: 10px;
+  padding-top: 10px;
+  .title {
+    font-size: 12px;
+  }
+  .name {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 15px;
+  .github {
+    width: 50px;
+    height: 50px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.icon {
+  border: 2px solid #222325;
+
+  font-size: 8pt;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #ccc;
+  border: 4px solid #0f6bb6;
+  padding: 6px;
+}
