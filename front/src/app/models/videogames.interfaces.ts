@@ -7,3 +7,9 @@ export interface VideogamesInterface {
     year: number;
     genre: string;
 }
+
+
+export interface PlatformInterface{
+    id: number;
+    value: string;
+}
