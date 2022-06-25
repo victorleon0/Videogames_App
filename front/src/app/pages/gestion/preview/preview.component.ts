@@ -25,6 +25,7 @@ export class PreviewComponent implements OnInit {
   ngOnInit(): void {
     this.videogamesService.receivePreview().subscribe((preview) => {
       this.itemPreview = preview;
+      console.log('preview', this.itemPreview);
     })
   }
 
