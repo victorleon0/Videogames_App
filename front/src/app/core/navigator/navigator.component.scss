@@ -1,16 +1,46 @@
-nav{
-    ul{
-      height: 10vh;
-      display:flex;
-      justify-content: space-around;
-      align-items:center;
-      a{
-        color:var(--headline);
-        transition:all 0.3s;
-        text-transform: uppercase;
-        &:hover{
-          color:var(--headline-light)
-        }
+nav {
+  display: flex;
+  justify-content: center;
+  ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    border-radius: 20px;
+
+    a {
+      text-transform: uppercase;
+      &:hover {
+        color: #77C3B1;
       }
     }
+
+    .inputbox {
+      width: 20rem;
+      height: 2rem;
+      
+      background: #F2F2F2;
+      
+      border: 1px solid #CCCCCC;
+      border-radius: 2rem;
+      outline: none;
+      
+      font-size: 20px;
+      text-align: center;
+      color: #737373;
+      letter-spacing: 1px;
+    }
+
+    img{
+        height: 80px;
+        width: auto;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
   }
+}
