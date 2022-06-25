@@ -1,3 +1,4 @@
+import { VideogamesInterface } from './../../../models/videogames.interfaces';
 import { Component, OnInit } from '@angular/core';
 import { VideogamesService } from 'src/app/services/videogames.service';
 
@@ -7,12 +8,26 @@ import { VideogamesService } from 'src/app/services/videogames.service';
   styleUrls: ['./preview.component.scss']
 })
 export class PreviewComponent implements OnInit {
-  public preview: any = this.videogameService.itemToPreview;
+  public itemPreview: VideogamesInterface;
 
-  constructor(private videogameService: VideogamesService) { }
+  constructor(private videogamesService: VideogamesService) {
+    this.itemPreview = {
+      id: 0,
+      title: '',
+      company: '',
+      cover: '',
+      platform: [],
+      year: 0,
+      genre: ''
+    }
+   }
 
   ngOnInit(): void {
-    console.log(this.preview);
+    this.videogamesService.receivePreview().subscribe((preview) => {
+      this.itemPreview = preview;
+    })
   }
+
+
 
 }

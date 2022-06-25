@@ -1,7 +1,8 @@
-import { VideogamesInterface, PlatformInterface } from './../../../models/videogames.interfaces';
+import { PlatformInterface } from './../../../models/videogames.interfaces';
 import { VideogamesService } from 'src/app/services/videogames.service';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form',
@@ -27,6 +28,8 @@ export class FormComponent implements OnInit {
     "Shooter", "Fighting", "Survival Horror"
   ]
 
+  
+
   //Copiado para implementar las formArray en el campo platform
   get ordersFormArray() {
     return this.videogamesForm.controls['platform'] as FormArray;
@@ -44,7 +47,7 @@ export class FormComponent implements OnInit {
       platform: new FormArray([])
     })
 
-
+    //Copiado para implementar las formArray en el campo platform
     this.addCheckboxes();
 
     this.videogamesForm.valueChanges.subscribe((changes) => {
@@ -55,8 +58,9 @@ export class FormComponent implements OnInit {
         }
       });
       this.newVideogame = {...changes, platform: auxArray };
-      this.videogamesService.itemToPreview = this.newVideogame;
-      console.log(this.videogamesService.itemToPreview);
+      this.videogamesService.sendPreview(this.newVideogame);
+    
+    
     })
   }
 
@@ -70,7 +74,7 @@ export class FormComponent implements OnInit {
    
       this.videogamesService.postVideogame(this.newVideogame).subscribe();
     
-    //En el ejemplo de Antonio lo pone en el init, comprobar que si no funciona aqui lo cambiamos arriba
+    //En el ejemplo de Antonio lo pone en el init, comprobar, que si no funciona aqui lo cambiamos arriba
     this.videogamesService.videogameClear();
     this.videogamesForm.reset();
   }

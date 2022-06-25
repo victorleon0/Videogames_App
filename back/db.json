@@ -66,6 +66,17 @@
         "PC"
       ],
       "id": 5
+    },
+    {
+      "title": "Bayonetta 2",
+      "company": "Platinum Games",
+      "cover": "https://frsgames.com/161-large_default/comprar-bayonetta-2-switch-clave-nintendo.jpg",
+      "genre": "Action",
+      "year": "2018",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 6
     }
   ]
 }

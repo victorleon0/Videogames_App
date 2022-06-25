@@ -1,3 +1,4 @@
+import { Observable, Subject } from 'rxjs';
 import { VideogamesInterface } from './../models/videogames.interfaces';
 
 import { Injectable } from '@angular/core';
@@ -8,20 +9,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class VideogamesService {
   public URL: string = "http://localhost:3000/videogames";
+  //Observer para que puedan detectar los cambios en la var necesaria para hacer el preview a tiempo real 
+  private subject = new Subject<any>();
 
 
   constructor(private httpClient: HttpClient) { }
 
-  public itemToPreview: any = {
-    id: '',
-    title: '',
-    company: '',
-    cover: '',
-    platform: [],
-    year: 0,
-    genre: ''
+  //Para que preview pueda recibir los cambios actualizados del formulario, una envia y la otra recibe
+  public sendPreview = (itemToPreview:VideogamesInterface) => {
+    this.subject.next(itemToPreview);
   }
-  
+  public receivePreview = ():Observable<any> => {
+    return this.subject.asObservable();
+  }
+
+
+  //Inicializar var
   public videogameData: any = {
     id: '',
     title: '',
@@ -45,7 +48,7 @@ export class VideogamesService {
     }
   }
 
-
+  //CRUD
   public getVideogames = () => {
     return this.httpClient.get(this.URL);
   }
