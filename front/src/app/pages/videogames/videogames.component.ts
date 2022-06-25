@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { VideogamesInterface } from './../../models/videogames.interfaces';
+
 
 @Component({
   selector: 'app-videogames',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./videogames.component.scss']
 })
 export class VideogamesComponent implements OnInit {
+
+  @Input() public videogamesList!: VideogamesInterface[];
+
+
 
   constructor() { }
 
