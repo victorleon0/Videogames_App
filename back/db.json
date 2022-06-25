@@ -77,6 +77,17 @@
         "Nintendo Switch"
       ],
       "id": 6
+    },
+    {
+      "title": "Luigi's Mansion",
+      "company": "Nintendo",
+      "cover": "https://m.media-amazon.com/images/I/81cHm50auZL._AC_SY879_.jpg",
+      "genre": "Action",
+      "year": "2019",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 7
     }
   ]
 }
