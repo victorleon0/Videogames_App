@@ -12,7 +12,6 @@ export interface PlatformInterface{
     id: number;
     value: string;
 }
-=======
 export interface NavigatorInterface {
     logo:ImageInterface;
     links:LinksInterface[];

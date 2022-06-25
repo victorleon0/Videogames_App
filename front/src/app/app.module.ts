@@ -11,6 +11,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { PreviewComponent } from './pages/gestion/preview/preview.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './pages/gestion/form/form.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -25,6 +26,7 @@ import { FormComponent } from './pages/gestion/form/form.component';
     FooterComponent,
     PreviewComponent,
     FormComponent,
+    LoginComponent,
 
 
   ],
