@@ -1,0 +1,19 @@
+
+
+form{
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    width:50vw;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        width:40%;
+        margin: 10px 0;
+    }
+
+    button{
+        width:  30%;
+    }
+}

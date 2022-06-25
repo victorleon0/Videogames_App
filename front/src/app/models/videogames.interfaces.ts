@@ -7,6 +7,12 @@ export interface VideogamesInterface {
     year: number;
     genre: string;
 }
+
+export interface PlatformInterface{
+    id: number;
+    value: string;
+}
+=======
 export interface NavigatorInterface {
     logo:ImageInterface;
     links:LinksInterface[];
@@ -21,4 +27,5 @@ export interface LinksInterface {
     text: string;
     link: string;
 }
+
 

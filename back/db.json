@@ -1,34 +1,93 @@
 {
-    "videogames": [
-      {
-        "id": 1,
-        "title": "The Legend of Zelda: Ocarina of Time",
-        "company": "Nintendo",
-        "cover": "https://static-cdn.jtvnw.net/ttv-boxart/The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time%203D.jpg",
-        "platform": ["Nintendo 64", "Nintendo Switch", "GameCube", "Nintendo 3DS"],
-        "year": "1998",
-        "genre": "Adventures"
-
-      },
-      {
-        "id": 2,
-        "title": "Mass Effect Legendary Edition",
-        "company": "Bioware",
-        "cover": "https://images-ext-2.discordapp.net/external/GcFRIDab5Au9pUpsezuxzdeCrsXbii_-jLYkGS07rYg/https/cdn.vox-cdn.com/thumbor/LBUbfRw7WM1yP-KTN72t7xQ8n7g%3D/1400x1400/filters%3Aformat%28jpeg%29/cdn.vox-cdn.com/uploads/chorus_asset/file/22494171/wallpaper.jpg?width=838&height=838",
-        "platform": ["PS", "XBOX", "Switch", "Pc"] ,
-        "year": "2021",
-        "genre": "RPG"
-
-      },
-      {
-        "id": 3,
-        "title": "Assasin's Creed - Oddysey",
-        "company": "Ubisoft",
-        "cover": "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/HXxek19ysMe9h1WjkasfIcovCjlbBitz.png",
-        "platform": ["PS", "XBOX", "Switch", "Pc"], 
-        "year": "2018",
-        "genre": "Adventures"
-
-      }
-    ]}
-    
+  "videogames": [
+    {
+      "id": 1,
+      "title": "The Legend of Zelda: Ocarina of Time",
+      "company": "Nintendo",
+      "cover": "https://static-cdn.jtvnw.net/ttv-boxart/The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time%203D.jpg",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "year": "1998",
+      "genre": "Adventures"
+    },
+    {
+      "id": 2,
+      "title": "Mass Effect Legendary Edition",
+      "company": "Bioware",
+      "cover": "https://images-ext-2.discordapp.net/external/GcFRIDab5Au9pUpsezuxzdeCrsXbii_-jLYkGS07rYg/https/cdn.vox-cdn.com/thumbor/LBUbfRw7WM1yP-KTN72t7xQ8n7g%3D/1400x1400/filters%3Aformat%28jpeg%29/cdn.vox-cdn.com/uploads/chorus_asset/file/22494171/wallpaper.jpg?width=838&height=838",
+      "platform": [
+        "PlayStation",
+        "XBOX",
+        "Nintendo Switch",
+        "Pc"
+      ],
+      "year": "2021",
+      "genre": "RPG"
+    },
+    {
+      "id": 3,
+      "title": "Assasin's Creed - Oddysey",
+      "company": "Ubisoft",
+      "cover": "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/HXxek19ysMe9h1WjkasfIcovCjlbBitz.png",
+      "platform": [
+        "PlayStation",
+        "XBOX",
+        "Nintendo Switch",
+        "Pc"
+      ],
+      "year": "2018",
+      "genre": "Adventures"
+    },
+    {
+      "title": "Overwatch",
+      "company": "Blizzard",
+      "cover": "https://m.media-amazon.com/images/I/61FQesvdvzL._AC_SY741_.jpg",
+      "genre": "Shooter",
+      "year": "2016",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Skyrim",
+      "company": "Bethesda",
+      "cover": "https://static.wikia.nocookie.net/elderscrolls/images/c/c5/Skyrim_Cover.png/revision/latest?cb=20160812173034",
+      "genre": "RPG",
+      "year": "2011",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 5
+    },
+    {
+      "title": "Bayonetta 2",
+      "company": "Platinum Games",
+      "cover": "https://frsgames.com/161-large_default/comprar-bayonetta-2-switch-clave-nintendo.jpg",
+      "genre": "Action",
+      "year": "2018",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 6
+    },
+    {
+      "title": "Luigi's Mansion",
+      "company": "Nintendo",
+      "cover": "https://m.media-amazon.com/images/I/81cHm50auZL._AC_SY879_.jpg",
+      "genre": "Action",
+      "year": "2019",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 7
+    }
+  ]
+}
