@@ -7,6 +7,7 @@
         <h5>{{ videogames.year }}</h5>
         <img src="{{ videogames.cover }}" alt="{{ videogames.title }}" />
         <p>Company: {{ videogames.company }}</p>
+        <button (click)="selectedToEdit(videogames)">Editar</button>
       </figure>
     </div>
   </section>

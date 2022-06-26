@@ -31,7 +31,7 @@ export class VideogamesService {
     company: '',
     cover: '',
     platform: [],
-    year: 0,
+    year: '',
     genre: ''
   }
 
@@ -43,21 +43,33 @@ export class VideogamesService {
       company: '',
       cover: '',
       platform: [],
-      year: 0,
+      year: '',
       genre: ''
     }
   }
 
   //CRUD
+
+  //Recoge los datos del db.json
   public getVideogames = () => {
     return this.httpClient.get(this.URL);
   }
 
+  //Añade registro al db.json desde el form.component
   public postVideogame = (newVideogame: any) => {
     return this.httpClient.post(this.URL, newVideogame);
   } 
 
   
+  //Para darle valores al form para editar
+  public sendItemToEdit = (item: VideogamesInterface) => {
+    this.videogameData = item;
+  }
+
+  //Guardar el registro editado en db.json
+  public putVideogame = (id:any, itemToEdit:any) => {
+    return this.httpClient.put(`${this.URL}/${id}`, itemToEdit);
+  }
 
  
 }
