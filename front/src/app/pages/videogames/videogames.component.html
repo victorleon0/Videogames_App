@@ -1,5 +1,5 @@
 <section class="videogamesList">
-  <h2 class="videogamesTitle">Videogames</h2>
+  <h2 class="videogamesTitle">Videogames List</h2>
   <div *ngIf="videogamesList.length" class="videogamesContent">
     <!-- Intentad componentizar este figure para utilizar solamente un <app-figure> en vez de todo este codigo -->
     <figure *ngFor="let videogames of videogamesList" class="videogameUnit">
@@ -7,8 +7,8 @@
       <div class="imgcontainer">
         <img src="{{ videogames.cover }}" alt="{{ videogames.title }}" />
       </div>
-      <h5>{{ videogames.year }}</h5>
-      <p>Company: {{ videogames.company }}</p>
+      <h5></h5>
+      <p>{{ videogames.company }} - {{ videogames.year }}</p>
       <button (click)="selectedToEdit(videogames)">Editar</button>
     </figure>
   </div>

@@ -4,47 +4,57 @@
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-}
-.videogamesContent {
-    box-sizing: border-box;
-    display: flex;
-    width: 100vw;
-    height: 360px;
     gap: 20px;
-    object-fit: center ;
+    h2 {
+        margin: 0 auto;
+        font-size: 30px;
+        color:#77C3B1;
+        font-weight: bold;
+    }
+}
+
+.videogamesContent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     flex-wrap: wrap;
-    padding: 50px;
-    .videogameUnit {
-    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+
+    figure{
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 360px;
-    background-color: aqua;
-        h4 {
-            flex: 1;
-            font-size: 10px;
-        }
-        .imgcontainer {
-            background-color: black;
-                  
-            width: 200px;
-            height: 300px;
-            align-items: center;
-            
-            img {
-            max-width: 250px;
-            max-height: 300px;
-            visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    width: 200px;
+    background-color: rgba(78, 77, 77, 0.917);
+    border-radius: 10px;
 
-            
-        }
+    img{
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+    }
+    button {
+        visibility: hidden;
+        width: 120px;
+        height: 30px;
+        background-color: #77C3B1 ;
+        box-shadow: #141515;
+        border-radius: 20px;
+        border: 0px ;
+
+    }
     
-        }
-        
     
     }
-
-   
-
+    :hover {
+        button {
+            visibility: visible;
+        }
+    }
 }
+
