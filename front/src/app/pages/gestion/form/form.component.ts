@@ -16,10 +16,13 @@ export class FormComponent implements OnInit {
   //ESta var se cargara con los valores iniciales en edicion
   public newVideogame = this.videogamesService.videogameData;
   public idVideogame = this.videogamesService.videogameData.id;
-//Mirar si es util
+//Mirar si es util, porque de momento no la veo usada en ningun sitio
   public submitted: boolean = false;
 
   public btnText:string = 'Add';
+
+  public showToConfirmDelete: boolean = false;
+  
   
   
   public plataformsList: PlatformInterface[] = [
@@ -131,10 +134,21 @@ export class FormComponent implements OnInit {
     this.videogamesForm.reset();
   }
 
+  public confirmDelete = (gonnaDelete: boolean) => {
+    console.log('aqui confirmacion');
+    if(gonnaDelete){
+      this.videogamesService.deleteVideogame(this.idVideogame).subscribe();
+      this.videogamesService.videogameClear();
+      this.router.navigate(['videogames']);
+    }else{
+
+    }
+    this.showToConfirmDelete = false;
+  }
+
   public deleteSelected = () => {
-    this.videogamesService.deleteVideogame(this.idVideogame).subscribe();
-    this.videogamesService.videogameClear();
-    this.router.navigate(['videogames']);
+    this.showToConfirmDelete = true;
+    console.log('aqui btn delete');
   }
 
 }

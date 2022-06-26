@@ -38,7 +38,17 @@
     </label>
   </div>
 
-  <button type="submit" [disabled]="!videogamesForm.valid ">{{btnText}}</button>
-  <button *ngIf="idVideogame !== ''" (click)="deleteSelected()">Delete</button>
-
+  <button type="submit" class="add-btn"  [disabled]="!videogamesForm.valid ">{{btnText}}</button>
 </form>
+
+<div>
+  <button class="start-btn" *ngIf="idVideogame !== ''" (click)="deleteSelected()">Delete</button>
+</div>
+
+<div class="showToConfirmDelete" *ngIf="showToConfirmDelete">
+  <h3>Sure about this delete???</h3>
+  <div class="container-btn">
+    <button class="start-btn" (click)="confirmDelete(true)">Yes</button>
+    <button class="start-btn" (click)="confirmDelete(false)">Maybe not</button>
+  </div>
+</div>

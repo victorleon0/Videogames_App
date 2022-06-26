@@ -1,10 +1,12 @@
 
 
-form{
+form, div{
     margin-left: 10vw;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     width:50vw;
+    z-index: 1;
 
     div{
         display: flex;
@@ -13,7 +15,67 @@ form{
         margin: 10px 0;
     }
 
-    button{
-        width:  30%;
+}
+
+.showToConfirmDelete{
+    position:absolute;
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #cbc4c4;//#888888;
+    background-image: url('../../../../assets/videogames.jpg');
+    left: 20%;
+    top:30%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 50vh;
+    
+
+    h3{
+        flex:1;
+    }
+
+    .container-btn{
+        flex:3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
+
+
+.start-btn, .add-btn{
+    width: 40%;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    margin:5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+
+.start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
+
+.add-btn:disabled{
+    cursor: not-allowed;
+}
+
