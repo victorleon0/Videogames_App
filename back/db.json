@@ -18,15 +18,9 @@
       "cover": "https://images-ext-2.discordapp.net/external/GcFRIDab5Au9pUpsezuxzdeCrsXbii_-jLYkGS07rYg/https/cdn.vox-cdn.com/thumbor/LBUbfRw7WM1yP-KTN72t7xQ8n7g%3D/1400x1400/filters%3Aformat%28jpeg%29/cdn.vox-cdn.com/uploads/chorus_asset/file/22494171/wallpaper.jpg?width=838&height=838",
       "platform": [
         "PlayStation",
-<<<<<<< HEAD
-        "XBOX",
-        "Nintendo Switch",
-        "Pc"
-=======
         "Xbox",
         "Nintendo Switch",
         "PC"
->>>>>>> form-edit
       ],
       "year": "2021",
       "genre": "RPG"
@@ -38,15 +32,9 @@
       "cover": "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/HXxek19ysMe9h1WjkasfIcovCjlbBitz.png",
       "platform": [
         "PlayStation",
-<<<<<<< HEAD
-        "XBOX",
-        "Nintendo Switch",
-        "Pc"
-=======
         "Xbox",
         "Nintendo Switch",
         "PC"
->>>>>>> form-edit
       ],
       "year": "2018",
       "genre": "Adventures"
@@ -78,8 +66,6 @@
         "PC"
       ],
       "id": 5
-<<<<<<< HEAD
-=======
     },
     {
       "title": "Bayonetta 2",
@@ -182,7 +168,6 @@
         "PC"
       ],
       "id": 14
->>>>>>> form-edit
     }
   ]
 }
