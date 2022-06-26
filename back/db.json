@@ -88,6 +88,86 @@
         "Nintendo Switch"
       ],
       "id": 7
+    },
+    {
+      "title": "Inscryption",
+      "company": "Devolver Digital",
+      "cover": "https://as01.epimg.net/meristation/imagenes/2021/10/25/analisis/1635179289_198474_1635280026_noticia_normal.jpg",
+      "genre": "Strategy",
+      "year": "2021",
+      "platform": [
+        "PC"
+      ],
+      "id": 8
+    },
+    {
+      "title": "prueba",
+      "company": "prueba",
+      "cover": "prueba",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 9
+    },
+    {
+      "title": "prueba2",
+      "company": "prueba2",
+      "cover": "prueba",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "PC"
+      ],
+      "id": 10
+    },
+    {
+      "title": "solo probando",
+      "company": "s",
+      "cover": "s",
+      "genre": "RPG",
+      "year": "s",
+      "platform": [
+        "PlayStation"
+      ],
+      "id": 11
+    },
+    {
+      "title": "probando el edit otra vez",
+      "company": "s",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "Action",
+      "year": "s",
+      "platform": [
+        "PlayStation",
+        "PC"
+      ],
+      "id": 12
+    },
+    {
+      "title": "Evangelion",
+      "company": "f",
+      "cover": "https://www.fayerwayer.com/resizer/OnX1-hYov_2USG48352jg64bkPU=/1200x630/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/73FBW26Z3JEINLQ3LPQHIKSTCM.jpg",
+      "genre": "Adventures",
+      "year": "f",
+      "platform": [
+        "Nintendo Switch",
+        "PC"
+      ],
+      "id": 13
+    },
+    {
+      "title": "probando add",
+      "company": "asdasd",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "PlayStation",
+        "PC"
+      ],
+      "id": 14
     }
   ]
 }

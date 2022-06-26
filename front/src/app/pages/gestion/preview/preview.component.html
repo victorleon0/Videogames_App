@@ -1,7 +1,7 @@
 
 <figure>
     <h3>{{itemPreview.title}}</h3>
-    <img src="{{itemPreview.cover}}" alt="{{itemPreview.title}}"/>
+    <img src="{{itemPreview.cover}}" alt="{{itemPreview.title}}" (error)="getError($event)"/>
     <p>{{itemPreview.company}}</p>
     <p>{{itemPreview.platform}}</p>
     <p>{{itemPreview.genre}}</p>

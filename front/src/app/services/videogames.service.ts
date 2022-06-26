@@ -31,7 +31,7 @@ export class VideogamesService {
     company: '',
     cover: '',
     platform: [],
-    year: 0,
+    year: '',
     genre: ''
   }
 
@@ -43,7 +43,7 @@ export class VideogamesService {
       company: '',
       cover: '',
       platform: [],
-      year: 0,
+      year: '',
       genre: ''
     }
   }
@@ -66,7 +66,10 @@ export class VideogamesService {
     this.videogameData = item;
   }
 
-  
+  //Guardar el registro editado en db.json
+  public putVideogame = (id:any, itemToEdit:any) => {
+    return this.httpClient.put(`${this.URL}/${id}`, itemToEdit);
+  }
 
  
 }

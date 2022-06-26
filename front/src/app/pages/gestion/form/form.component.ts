@@ -2,6 +2,7 @@ import { PlatformInterface } from './../../../models/videogames.interfaces';
 import { VideogamesService } from 'src/app/services/videogames.service';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -13,9 +14,12 @@ import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@ang
 export class FormComponent implements OnInit {
   public videogamesForm!: FormGroup;
   //ESta var se cargara con los valores iniciales en edicion
-  public newVideogame: any = this.videogamesService.videogameData;
+  public newVideogame = this.videogamesService.videogameData;
+  public idVideogame = this.videogamesService.videogameData.id;
 //Mirar si es util
   public submitted: boolean = false;
+
+  public btnText:string = 'Add';
   
   
   public plataformsList: PlatformInterface[] = [
@@ -27,7 +31,7 @@ export class FormComponent implements OnInit {
 
   public genreList: string[] =[
     "Adventures", "Action", "RPG", "Platforms", "Sports",
-    "Shooter", "Fighting", "Survival Horror"
+    "Shooter", "Fighting", "Survival Horror", "Strategy"
   ]
 
   
@@ -37,15 +41,16 @@ export class FormComponent implements OnInit {
     return this.videogamesForm.controls['platform'] as FormArray;
   }
 
-  constructor(private videogamesService: VideogamesService, private formBuilder: FormBuilder) { }
+  constructor(private videogamesService: VideogamesService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     
     this.videogamesService.videogameClear();
 
-    ///Intento refrrescar el preview y NO LO HACE DE NUEVO;/////
+    ///Intento refrescar el preview y NO LO HACE DE NUEVO;/////
+    ///Tambien lo he intentado desde videogames.component en el click del boton editar => selectedToEdit
     if(this.newVideogame.id !== 0){                           //
-      console.log('vacio?',this.newVideogame);                //
+      //console.log('desde el edit',this.newVideogame);         //
       this.videogamesService.sendPreview(this.newVideogame);  //
     }                                                         //    
     ///////////////////////////////////////////////////////////
@@ -63,17 +68,16 @@ export class FormComponent implements OnInit {
     //Si no hay indice se incializa el array de platform a false, todos desmarcados
     if(this.newVideogame.id === '' || this.newVideogame === 0){
       this.addCheckboxes();
-    }else{ //Todo esto es para intentar cargar el valor de los checkbox en su posicion correcta
+    }else{ //Todo esto es para intentar cargar el valor de los checkbox en su posicion correcta cuando esta el modo edicion
+      this.btnText = 'Edit';
       const auxList:any = [];
       this.newVideogame.platform.forEach((element:any, index:number) =>{
         const aux = this.plataformsList.filter(filtered => element === filtered.value);
         if(aux.length > 0){
           auxList.push(aux[0].id);
-          console.log(auxList);
         }
       })
       auxList.sort();
-      console.log('sort',auxList);
       const mappedCheckbox = [];
       for(let i = 0; i < this.plataformsList.length; i++){
         mappedCheckbox.push(-1);
@@ -91,16 +95,18 @@ export class FormComponent implements OnInit {
       
     }
     
+    
 
     this.videogamesForm.valueChanges.subscribe((changes) => {
       const auxArray: string[] = [];
       this.plataformsList.forEach((element: PlatformInterface, index:number) => {
         if(changes.platform[index]){
           auxArray.push(element.value);
-         
         }
-        
       });
+      
+
+      
       this.newVideogame = {...changes, platform: auxArray };
       this.videogamesService.sendPreview(this.newVideogame);
     
@@ -113,9 +119,15 @@ export class FormComponent implements OnInit {
     this.plataformsList.forEach(() => this.ordersFormArray.push(new FormControl(false)));
   }
 
+
  
   public onSubmit = () => {
-    this.videogamesService.postVideogame(this.newVideogame).subscribe();
+    if(this.idVideogame === '' || this.idVideogame === 0){ //Post si no hay id
+      this.videogamesService.postVideogame(this.newVideogame).subscribe();
+    }else{ //El put se hace si ya existe el id 
+      this.videogamesService.putVideogame(this.idVideogame, this.newVideogame).subscribe();
+      this.router.navigate(['videogames']);
+    }
     this.videogamesForm.reset();
   }
 
