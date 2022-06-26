@@ -8,6 +8,12 @@ import { VideogamesComponent } from './pages/videogames/videogames.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
 import { NavigatorComponent } from './core/navigator/navigator.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PreviewComponent } from './pages/gestion/preview/preview.component';
+import { FormComponent } from './pages/gestion/form/form.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -16,12 +22,18 @@ import { FooterComponent } from './core/footer/footer.component';
     VideogamesComponent,
     GestionComponent,
     NavigatorComponent,
-    FooterComponent
+    FooterComponent,
+    PreviewComponent,
+    FormComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

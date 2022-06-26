@@ -1,1 +1,8 @@
 <p>videogames works!</p>
+
+<ul>
+    <li *ngFor="let videogame of videogamesList">
+        <h2>{{videogame.title}}</h2>
+        <button (click)="selectedToEdit(videogame)">Editar</button>
+    </li>
+</ul>
