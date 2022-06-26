@@ -131,4 +131,10 @@ export class FormComponent implements OnInit {
     this.videogamesForm.reset();
   }
 
+  public deleteSelected = () => {
+    this.videogamesService.deleteVideogame(this.idVideogame).subscribe();
+    this.videogamesService.videogameClear();
+    this.router.navigate(['videogames']);
+  }
+
 }

@@ -71,5 +71,10 @@ export class VideogamesService {
     return this.httpClient.put(`${this.URL}/${id}`, itemToEdit);
   }
 
+  //Borrar registro del db.json
+  public deleteVideogame = (idVideogame: number) => {
+    return this.httpClient.delete(`${this.URL}/${idVideogame}`);
+  }
+
  
 }

@@ -39,5 +39,6 @@
   </div>
 
   <button type="submit" [disabled]="!videogamesForm.valid ">{{btnText}}</button>
+  <button *ngIf="idVideogame !== ''" (click)="deleteSelected()">Delete</button>
 
 </form>
