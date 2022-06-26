@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Montserrat:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  background-image: url("./assets/videogames.jpg");
+  color: whitesmoke;
+}
+/*# sourceMappingURL=styles.css.map */
