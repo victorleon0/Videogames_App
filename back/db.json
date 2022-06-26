@@ -168,6 +168,15 @@
         "PC"
       ],
       "id": 14
+    },
+    {
+      "title": "Oddworld: Abe's Oddysee",
+      "company": "Sony",
+      "cover": "https://cdn-ext.fanatical.com/production/product/1280x720/fbd55f6d-249a-4931-b2a0-dc206cf6f749.jpeg",
+      "genre": "Platforms",
+      "year": "1997",
+      "platform": [],
+      "id": 15
     }
   ]
 }
