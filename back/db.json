@@ -18,9 +18,9 @@
       "cover": "https://images-ext-2.discordapp.net/external/GcFRIDab5Au9pUpsezuxzdeCrsXbii_-jLYkGS07rYg/https/cdn.vox-cdn.com/thumbor/LBUbfRw7WM1yP-KTN72t7xQ8n7g%3D/1400x1400/filters%3Aformat%28jpeg%29/cdn.vox-cdn.com/uploads/chorus_asset/file/22494171/wallpaper.jpg?width=838&height=838",
       "platform": [
         "PlayStation",
-        "XBOX",
+        "Xbox",
         "Nintendo Switch",
-        "Pc"
+        "PC"
       ],
       "year": "2021",
       "genre": "RPG"
@@ -32,9 +32,9 @@
       "cover": "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/HXxek19ysMe9h1WjkasfIcovCjlbBitz.png",
       "platform": [
         "PlayStation",
-        "XBOX",
+        "Xbox",
         "Nintendo Switch",
-        "Pc"
+        "PC"
       ],
       "year": "2018",
       "genre": "Adventures"
@@ -88,6 +88,86 @@
         "Nintendo Switch"
       ],
       "id": 7
+    },
+    {
+      "title": "Inscryption",
+      "company": "Devolver Digital",
+      "cover": "https://as01.epimg.net/meristation/imagenes/2021/10/25/analisis/1635179289_198474_1635280026_noticia_normal.jpg",
+      "genre": "Strategy",
+      "year": "2021",
+      "platform": [
+        "PC"
+      ],
+      "id": 8
+    },
+    {
+      "title": "prueba",
+      "company": "prueba",
+      "cover": "prueba",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 9
+    },
+    {
+      "title": "prueba2",
+      "company": "prueba2",
+      "cover": "prueba",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "PC"
+      ],
+      "id": 10
+    },
+    {
+      "title": "solo probando",
+      "company": "s",
+      "cover": "s",
+      "genre": "RPG",
+      "year": "s",
+      "platform": [
+        "PlayStation"
+      ],
+      "id": 11
+    },
+    {
+      "title": "probando el edit otra vez",
+      "company": "s",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "Action",
+      "year": "s",
+      "platform": [
+        "PlayStation",
+        "PC"
+      ],
+      "id": 12
+    },
+    {
+      "title": "Evangelion",
+      "company": "f",
+      "cover": "https://www.fayerwayer.com/resizer/OnX1-hYov_2USG48352jg64bkPU=/1200x630/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/73FBW26Z3JEINLQ3LPQHIKSTCM.jpg",
+      "genre": "Adventures",
+      "year": "f",
+      "platform": [
+        "Nintendo Switch",
+        "PC"
+      ],
+      "id": 13
+    },
+    {
+      "title": "probando add",
+      "company": "asdasd",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "PlayStation",
+        "PC"
+      ],
+      "id": 14
     }
   ]
 }
