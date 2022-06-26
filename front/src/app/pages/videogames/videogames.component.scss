@@ -1,0 +1,50 @@
+.videogamesList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+.videogamesContent {
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    height: 360px;
+    gap: 20px;
+    object-fit: center ;
+    flex-wrap: wrap;
+    padding: 50px;
+    .videogameUnit {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 360px;
+    background-color: aqua;
+        h4 {
+            flex: 1;
+            font-size: 10px;
+        }
+        .imgcontainer {
+            background-color: black;
+                  
+            width: 200px;
+            height: 300px;
+            align-items: center;
+            
+            img {
+            max-width: 250px;
+            max-height: 300px;
+            visibility: hidden;
+
+            
+        }
+    
+        }
+        
+    
+    }
+
+   
+
+}
