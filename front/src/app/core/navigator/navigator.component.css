@@ -1,0 +1,64 @@
+.navigator {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navigator nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000002;
+}
+
+.navigator nav ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  border-radius: 20px;
+}
+
+.navigator nav ul a {
+  text-transform: uppercase;
+}
+
+.navigator nav ul a:hover {
+  color: #77C3B1;
+}
+
+.navigator nav ul .inputbox {
+  width: 20rem;
+  height: 2rem;
+  background: #F2F2F2;
+  border: 1px solid #CCCCCC;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  color: #737373;
+  letter-spacing: 1px;
+}
+
+.navigator nav ul img {
+  height: 80px;
+  width: auto;
+  cursor: pointer;
+}
+
+.navigator nav ul img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=navigator.component.css.map */

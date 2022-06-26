@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+.showcase {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.showcase video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  font-family: 'Chango', cursive;
+  text-align: center;
+  background-image: url("../../../assets/videogames.jpg");
+  font-size: 80px;
+  color: #fff;
+  mix-blend-mode: multiply;
+}
+
+.title2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-image: url("../../../assets/videogames.jpg");
+  font-size: 100px;
+  color: #fff;
+  mix-blend-mode: multiply;
+}
+
+.subtitle {
+  position: absolute;
+  top: 300px;
+  text-align: center;
+}
+/*# sourceMappingURL=home.component.css.map */
