@@ -1,6 +1,6 @@
 .footer {
   box-sizing: content-box;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: row;
   border-top: 1px solid #dedede;
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  gap: 150px;
+  gap: 90px;
 }
 
 .personal-card {
@@ -76,5 +76,6 @@
   text-align: center;
   cursor: pointer;
 }
+
 
 
