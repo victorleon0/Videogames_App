@@ -3,6 +3,7 @@ import { VideogamesService } from 'src/app/services/videogames.service';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { validateYear, checkedRequired } from 'src/app/validators/form.validators';
 
 
 
@@ -18,11 +19,10 @@ export class FormComponent implements OnInit {
   public idVideogame = this.videogamesService.videogameData.id;
 //Mirar si es util, porque de momento no la veo usada en ningun sitio
   public submitted: boolean = false;
-
+//Para cambiar el texto del boton segun sea add o edit
   public btnText:string = 'Add';
 
-  public showToConfirmDelete: boolean = false;
-  
+  public showToConfirmDelete: boolean = false;  
   
   
   public plataformsList: PlatformInterface[] = [
@@ -65,6 +65,10 @@ export class FormComponent implements OnInit {
       genre: [this.newVideogame.genre,[Validators.required]],
       year: [this.newVideogame.year,[Validators.required]],
       platform: new FormArray([])
+    },
+    {
+      validator: [validateYear('year'),
+        checkedRequired('platform')]
     })
 
     //Copiado para implementar las formArray en el campo platform
@@ -134,21 +138,22 @@ export class FormComponent implements OnInit {
     this.videogamesForm.reset();
   }
 
+  //En vez de borrar directamente saca una ventana para que se confirme la seleccion
   public confirmDelete = (gonnaDelete: boolean) => {
-    console.log('aqui confirmacion');
     if(gonnaDelete){
       this.videogamesService.deleteVideogame(this.idVideogame).subscribe();
       this.videogamesService.videogameClear();
       this.router.navigate(['videogames']);
-    }else{
-
     }
     this.showToConfirmDelete = false;
   }
 
+  //Esta funcion se le llama cuando se clickea el btn delete, pone un boleano a true para que muestre 
+  //la ventana de confirmacion de borrado, la funcion que esta arriba, que es la que realmente borra 
+  //si se le da al boton de Yes y solo vuelve a ocultar la venta si se clickea el cancel
   public deleteSelected = () => {
     this.showToConfirmDelete = true;
-    console.log('aqui btn delete');
   }
+
 
 }
