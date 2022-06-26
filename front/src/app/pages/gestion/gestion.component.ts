@@ -12,11 +12,16 @@ import { Component, OnInit } from '@angular/core';
   
 })
 export class GestionComponent implements OnInit {
-
+  public errorReceived:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+
+  public receiveErrorInForm = (errorLink:boolean) => {
+    this.errorReceived = errorLink;
+    console.log(this.errorReceived);
   }
 
 }

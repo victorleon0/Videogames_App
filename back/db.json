@@ -184,6 +184,40 @@
         "PlayStation"
       ],
       "id": 18
+    },
+    {
+      "title": "asdas",
+      "company": "asdas",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch"
+      ],
+      "id": 19
+    },
+    {
+      "title": "Prueba del validator",
+      "company": "asdasd",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "Adventures",
+      "year": "2022",
+      "platform": [
+        "PlayStation"
+      ],
+      "id": 20
+    },
+    {
+      "title": "dfssd",
+      "company": "sdfsd",
+      "cover": "../../assets/images/No_image_available.svg",
+      "genre": "RPG",
+      "year": "2020",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 21
     }
   ]
 }

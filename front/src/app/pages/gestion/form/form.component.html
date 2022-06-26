@@ -11,9 +11,9 @@
 
   <div>
     <label for="cover">Cover:</label>
-    <input type="text" id="cover" formControlName="cover" />
+    <input  type="text" id="cover" #myCover (focus)="myCover.select()" formControlName="cover" />
   </div>
-
+  
   <div>
     <label for="genre"></label>
     <select id="genre" formControlName="genre">
