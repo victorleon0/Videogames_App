@@ -1,6 +1,6 @@
 import { PlatformInterface } from './../../../models/videogames.interfaces';
 import { VideogamesService } from 'src/app/services/videogames.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { validateYear, checkedRequired } from 'src/app/validators/form.validators';
@@ -13,6 +13,7 @@ import { validateYear, checkedRequired } from 'src/app/validators/form.validator
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  @Input() public errorCover!: boolean;
   public videogamesForm!: FormGroup;
   //ESta var se cargara con los valores iniciales en edicion
   public newVideogame = this.videogamesService.videogameData;
@@ -47,15 +48,14 @@ export class FormComponent implements OnInit {
   constructor(private videogamesService: VideogamesService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
-    
+
     this.videogamesService.videogameClear();
 
    
-
     this.videogamesForm = this.formBuilder.group({
       title: [this.newVideogame.title,[Validators.required]],
       company: [this.newVideogame.company,[Validators.required]],
-      cover: [this.newVideogame.cover,{ validator: Validators.required, updateOn: 'blur'}],
+      cover: [this.newVideogame.cover,{ validator: Validators.required, updateOn: 'blur'}], //,[ Validators.required]],
       genre: [this.newVideogame.genre,[Validators.required]],
       year: [this.newVideogame.year,[Validators.required]],
       platform: new FormArray([])
@@ -108,18 +108,20 @@ export class FormComponent implements OnInit {
     
       this.newVideogame = {...changes, platform: auxArray };
       this.videogamesService.sendPreview(this.newVideogame);
+      //Detecta si el link no funciona por el error que manda por medio del servicio el preview
+      //Si el link da error cambia la var que contiene los campos editados y el input del formulario
+      //con la imagen por defecto que evita que siga mandando mensajes de error
+      if(this.videogamesService.errorCover){
+        this.newVideogame = {...this.newVideogame, cover: '../../assets/images/no-image-available.jpg'};
+        this.videogamesService.errorCover = false;
+        this.videogamesForm.controls['cover'].setValue('../../assets/images/no-image-available.jpg');
+      }
     })
 
-     ///Intento refrescar el preview y NO LO HACE DE NUEVO;/////
-    ///Tambien lo he intentado desde videogames.component en el click del boton editar => selectedToEdit
-   /*  if(this.newVideogame.id !== ''){   */                         //
-   console.log('desde el edit',this.newVideogame);  //
-   this.videogamesService.sendPreview(this.newVideogame);  //
-    this.newVideogame = {...this.newVideogame};
-   /* } */                                           
-                //    
- ///////////////////////////////////////////////////////////
+  }
 
+  public validateLink = () => {
+    
   }
 
   //Copiado para implementar las formArray en el campo platform
@@ -155,6 +157,7 @@ export class FormComponent implements OnInit {
   public deleteSelected = () => {
     this.showToConfirmDelete = true;
   }
+
 
 
 }
