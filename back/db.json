@@ -196,6 +196,20 @@
         "PlayStation"
       ],
       "id": 21
+    },
+    {
+      "title": "Los Sims 4",
+      "company": "EA Games",
+      "cover": "https://sm.ign.com/ign_es/game/l/los-sims-4/los-sims-4_c8f4.jpg",
+      "genre": "Adventures",
+      "year": "2014",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 22
     }
   ]
 }
