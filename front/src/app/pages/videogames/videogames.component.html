@@ -1,8 +1,7 @@
 <section class="videogamesList">
   <h2 class="videogamesTitle">Videogames List</h2>
-  <input type="text" placeholder="Busca tu videojuego favorito" class="inputbox" >
+  <input type="text" placeholder="Busca tu videojuego favorito" class="inputbox" [(ngModel)]="inputSearch" (ngModelChange)="filterVideogames(inputSearch)" >
   <div *ngIf="videogamesList.length" class="videogamesContent">
-    <!-- Intentad componentizar este figure para utilizar solamente un <app-figure> en vez de todo este codigo -->
     <figure *ngFor="let videogames of videogamesList" class="videogameUnit">
       <h4>{{ videogames.title }}</h4>
       <div class="imgcontainer">
@@ -14,3 +13,4 @@
     </figure>
   </div>
 </section>
+
