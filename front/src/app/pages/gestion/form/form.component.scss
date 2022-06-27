@@ -7,12 +7,14 @@ form, div{
     flex-direction: column;
     width:50vw;
     z-index: 1;
+    
 
     div{
         display: flex;
         flex-direction: column;
         width:40%;
         margin: 10px 0;
+        
     }
 
 }
