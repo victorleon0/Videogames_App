@@ -105,24 +105,14 @@
       "company": "s",
       "cover": "../../assets/images/No_image_available.svg",
       "genre": "Action",
-      "year": "s",
+      "year": "2010",
       "platform": [
         "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
         "PC"
       ],
       "id": 12
-    },
-    {
-      "title": "Evangelion",
-      "company": "f",
-      "cover": "https://www.fayerwayer.com/resizer/OnX1-hYov_2USG48352jg64bkPU=/1200x630/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/73FBW26Z3JEINLQ3LPQHIKSTCM.jpg",
-      "genre": "Adventures",
-      "year": "fa",
-      "platform": [
-        "Nintendo Switch",
-        "PC"
-      ],
-      "id": 13
     },
     {
       "title": "probando add y el edit",
@@ -186,18 +176,6 @@
       "id": 18
     },
     {
-      "title": "asdas",
-      "company": "asdas",
-      "cover": "../../assets/images/No_image_available.svg",
-      "genre": "Action",
-      "year": "2010",
-      "platform": [
-        "PlayStation",
-        "Nintendo Switch"
-      ],
-      "id": 19
-    },
-    {
       "title": "Prueba del validator",
       "company": "asdasd",
       "cover": "../../assets/images/No_image_available.svg",
@@ -209,17 +187,15 @@
       "id": 20
     },
     {
-      "title": "dfssd",
-      "company": "sdfsd",
-      "cover": "../../assets/images/No_image_available.svg",
+      "title": "Prueba",
+      "company": "asdas",
+      "cover": "../../assets/images/no-image-available.jpg",
       "genre": "RPG",
-      "year": "2020",
+      "year": "2025",
       "platform": [
-        "Nintendo Switch"
+        "PlayStation"
       ],
       "id": 21
     }
   ]
 }
-  
-  

@@ -33,7 +33,7 @@ export class PreviewComponent implements OnInit {
 
   //En el caso que la ruta de la imagen no exista, se pone por defecto una imagen
   public getError = (event:any):void => { 
-    this.itemPreview.cover = '../../assets/images/No_image_available.svg';
+    this.itemPreview.cover = '../../assets/images/no-image-available.jpg';
   }
 
 }
