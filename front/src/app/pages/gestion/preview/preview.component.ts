@@ -9,6 +9,7 @@ import { VideogamesService } from 'src/app/services/videogames.service';
 })
 export class PreviewComponent implements OnInit {
   public itemPreview: VideogamesInterface;
+  public previewVideogame = this.videogamesService.videogameData;
   
 
   constructor(private videogamesService: VideogamesService) {
@@ -24,9 +25,13 @@ export class PreviewComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    //En el caso que este en modo edit para que cargue los datos del videogame a editar
+    if(this.previewVideogame){
+      this.itemPreview = this.previewVideogame;
+    }
+
     this.videogamesService.receivePreview().subscribe((preview) => {
       this.itemPreview = preview;
-      //console.log('preview', this.itemPreview);
     })
   }
 

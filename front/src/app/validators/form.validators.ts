@@ -10,7 +10,7 @@ export function validateYear(controlYear:string){
             return;
         }
 
-        if(numberYear > 1960 && numberYear < 2030){
+        if(numberYear >= 1960 && numberYear <= 2030){
             year.setErrors(null);
         }else{
             year.setErrors({'incorrect': true});

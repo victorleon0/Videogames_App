@@ -50,18 +50,12 @@ export class FormComponent implements OnInit {
     
     this.videogamesService.videogameClear();
 
-    ///Intento refrescar el preview y NO LO HACE DE NUEVO;/////
-    ///Tambien lo he intentado desde videogames.component en el click del boton editar => selectedToEdit
-    if(this.newVideogame.id !== 0){                           //
-      //console.log('desde el edit',this.newVideogame);         //
-      this.videogamesService.sendPreview(this.newVideogame);  //
-    }                                                         //    
-    ///////////////////////////////////////////////////////////
+   
 
     this.videogamesForm = this.formBuilder.group({
       title: [this.newVideogame.title,[Validators.required]],
       company: [this.newVideogame.company,[Validators.required]],
-      cover: [this.newVideogame.cover,[Validators.required]],
+      cover: [this.newVideogame.cover,{ validator: Validators.required, updateOn: 'blur'}],
       genre: [this.newVideogame.genre,[Validators.required]],
       year: [this.newVideogame.year,[Validators.required]],
       platform: new FormArray([])
@@ -111,14 +105,21 @@ export class FormComponent implements OnInit {
           auxArray.push(element.value);
         }
       });
-      
-
-      
+    
       this.newVideogame = {...changes, platform: auxArray };
       this.videogamesService.sendPreview(this.newVideogame);
-    
-    
     })
+
+     ///Intento refrescar el preview y NO LO HACE DE NUEVO;/////
+    ///Tambien lo he intentado desde videogames.component en el click del boton editar => selectedToEdit
+   /*  if(this.newVideogame.id !== ''){   */                         //
+   console.log('desde el edit',this.newVideogame);  //
+   this.videogamesService.sendPreview(this.newVideogame);  //
+    this.newVideogame = {...this.newVideogame};
+   /* } */                                           
+                //    
+ ///////////////////////////////////////////////////////////
+
   }
 
   //Copiado para implementar las formArray en el campo platform
