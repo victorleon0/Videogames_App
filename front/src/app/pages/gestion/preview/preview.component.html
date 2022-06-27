@@ -2,7 +2,7 @@
 <figure class="videogameUnit">
     <h3>{{ itemPreview.title }}</h3>
     <div class="imgcontainer">
-      <img src="{{ itemPreview.cover }}" alt="{{ itemPreview.title }}" />
+      <img src="{{ itemPreview.cover }}" alt="{{ itemPreview.title }}" (error)="getError($event)"/>
     </div>
     <h5></h5>
     <p>{{ itemPreview.company }} - {{ itemPreview.year }}</p>

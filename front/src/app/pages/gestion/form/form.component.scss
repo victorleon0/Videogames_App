@@ -5,8 +5,10 @@ form, div{
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    width:50vw;
+    width:600px;
+    height: 400px;
     z-index: 1;
+
     
 
     div{
@@ -14,11 +16,34 @@ form, div{
         flex-direction: column;
         width:40%;
         margin: 10px 0;
+        gap: 5px;
+        color: whitesmoke;
+
+        .input {
+            width: 400px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid whitesmoke;
+            color: whitesmoke;
+            
+            
+        }
+        
+        select {
+            width: 400px;
+            height: 25px;
+            border: 1px solid whitesmoke;
+            color: whitesmoke;
+            background-color: transparent;
+            padding: 3px;
+        }
+        
         
     }
 
-}
 
+}
 .showToConfirmDelete{
     position:absolute;
     border: 2px solid;
@@ -80,4 +105,5 @@ form, div{
 .add-btn:disabled{
     cursor: not-allowed;
 }
+
 

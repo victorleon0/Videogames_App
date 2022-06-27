@@ -1,22 +1,27 @@
 
 <form novalidate [formGroup]="videogamesForm" (ngSubmit)="onSubmit()">
   <h2>Introduce los datos de tu videojuego:</h2>
-  <div>
+  <div class="titleForm">
     <label for="title">Title:</label>
-    <input type="text" id="title" formControlName="title" />
+    <input  class="input" type="text" id="title" formControlName="title" />
   </div>
 
-  <div>
+  <div class="companyForm">
     <label for="company">Company:</label>
-    <input type="text" id="company" formControlName="company" />
+    <input  class="input" type="text" id="company" formControlName="company" />
   </div>
 
-  <div>
+  <div  class="coverForm">
     <label for="cover">Cover:</label>
-    <input  type="text" id="cover" #myCover (focus)="myCover.select()" formControlName="cover" />
+    <input  class="input"  type="text" id="cover" #myCover (focus)="myCover.select()" formControlName="cover" />
+  </div>
+
+  <div  class="yearForm">
+    <label for="year">Year:</label>
+    <input class="input" type="text" id="year" formControlName="year" />
   </div>
   
-  <div>
+  <div  class="genreForm">
     <label for="genre"></label>
     <select id="genre" formControlName="genre">
       <option value="" disabled>Choose a genre</option>
@@ -26,16 +31,14 @@
     </select>
   </div>
 
-  <div>
-    <label for="year">Year:</label>
-    <input type="text" id="year" formControlName="year" />
-  </div>
+  
 
-  <div>
+  <div class="platformForm">
     <label
       formArrayName="platform"
       *ngFor="let platform of ordersFormArray.controls; let i = index">
-      <input type="checkbox" [formControlName]="i" />
+      
+      <input class="checkbox" type="checkbox" [formControlName]="i" />
       {{ plataformsList[i].value }}
     </label>
   </div>

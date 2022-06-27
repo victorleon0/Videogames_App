@@ -165,17 +165,6 @@
       "id": 17
     },
     {
-      "title": "dasd",
-      "company": "sadsa",
-      "cover": "../../assets/images/No_image_available.svg",
-      "genre": "Platforms",
-      "year": "2010",
-      "platform": [
-        "PlayStation"
-      ],
-      "id": 18
-    },
-    {
       "title": "Prueba del validator",
       "company": "asdasd",
       "cover": "../../assets/images/No_image_available.svg",
