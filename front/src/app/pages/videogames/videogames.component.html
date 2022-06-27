@@ -1,6 +1,10 @@
 <section class="videogamesList">
   <h2 class="videogamesTitle">Videogames List</h2>
   <input type="text" placeholder="Busca tu videojuego favorito" class="inputbox" [(ngModel)]="inputSearch" (ngModelChange)="filterVideogames(inputSearch)" >
+  <span class="botones">
+  <button class="mayor-btn" (click)="orderVideogamesByTitle('mayor')">Ordenar A-Z</button>
+  <button class="menor-btn" (click)="orderVideogamesByTitle('menor')">Ordenar Z-A</button>
+  </span>
   <div *ngIf="videogamesList.length" class="videogamesContent">
     <figure *ngFor="let videogames of videogamesList" class="videogameUnit">
       <h4>{{ videogames.title }}</h4>
