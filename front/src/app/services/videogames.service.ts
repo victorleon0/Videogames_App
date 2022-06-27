@@ -23,6 +23,8 @@ export class VideogamesService {
     return this.subject.asObservable();
   }
 
+  public errorCover:boolean = false;
+
 
   //Inicializar var
   public videogameData: any = {

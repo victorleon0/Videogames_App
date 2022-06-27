@@ -101,32 +101,6 @@
       "id": 8
     },
     {
-      "title": "probando el edit otra vez",
-      "company": "s",
-      "cover": "../../assets/images/No_image_available.svg",
-      "genre": "Action",
-      "year": "2010",
-      "platform": [
-        "PlayStation",
-        "Nintendo Switch",
-        "Xbox",
-        "PC"
-      ],
-      "id": 12
-    },
-    {
-      "title": "probando add y el edit",
-      "company": "asdasda veces parece qye no referesca al momento",
-      "cover": "../../assets/images/No_image_available.svg",
-      "genre": "Action",
-      "year": "2010",
-      "platform": [
-        "PlayStation",
-        "PC"
-      ],
-      "id": 14
-    },
-    {
       "title": "Call of Duty",
       "company": "EA",
       "cover": "data:image/jpeg;base64,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",
@@ -160,7 +134,8 @@
       "genre": "Adventures",
       "year": "2015",
       "platform": [
-        "Nintendo Switch"
+        "Nintendo Switch",
+        "PC"
       ],
       "id": 17
     },
@@ -210,6 +185,32 @@
         "PC"
       ],
       "id": 22
+    },
+    {
+      "title": "sadsad",
+      "company": "asdasd",
+      "cover": "../../assets/images/no-image-available.jpg",
+      "genre": "Action",
+      "year": "2010",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox"
+      ],
+      "id": 23
+    },
+    {
+      "title": "Resident Evil 4",
+      "company": "Capcom",
+      "cover": "https://cdn-cf.gamivo.com/image_cover.jpg?f=62778&n=4500487363528718.jpg&h=371af30fb93e4c1918705d8b1b88a689",
+      "genre": "Survival Horror",
+      "year": "2005",
+      "platform": [
+        "PlayStation",
+        "Xbox",
+        "PC"
+      ],
+      "id": 24
     }
   ]
 }
