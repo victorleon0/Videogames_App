@@ -35,8 +35,9 @@ form, div{
             height: 25px;
             border: 1px solid whitesmoke;
             color: whitesmoke;
-            background-color: transparent;
+            background-color: rgb(48, 47, 47);
             padding: 3px;
+           
         }
         
         
@@ -106,4 +107,7 @@ form, div{
     cursor: not-allowed;
 }
 
+.container-btn-delete{
+    margin-top: 10vh;
+}
 

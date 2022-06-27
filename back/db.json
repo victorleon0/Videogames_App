@@ -128,18 +128,6 @@
       "id": 16
     },
     {
-      "title": "Probando probando",
-      "company": "asdasd",
-      "cover": "../../assets/images/No_image_available.svg",
-      "genre": "Adventures",
-      "year": "2015",
-      "platform": [
-        "Nintendo Switch",
-        "PC"
-      ],
-      "id": 17
-    },
-    {
       "title": "Prueba del validator",
       "company": "asdasd",
       "cover": "../../assets/images/No_image_available.svg",
@@ -200,6 +188,19 @@
         "PC"
       ],
       "id": 24
+    },
+    {
+      "title": "Resident Evil 2",
+      "company": "Capcom",
+      "cover": "https://bloody-disgusting.com/wp-content/uploads/2018/07/re-2.png",
+      "genre": "Survival Horror",
+      "year": "2019",
+      "platform": [
+        "PlayStation",
+        "Xbox",
+        "PC"
+      ],
+      "id": 25
     }
   ]
 }
