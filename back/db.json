@@ -129,17 +129,18 @@
     },
     {
       "title": "Prueba del validator",
-      "company": "asdasd",
-      "cover": "../../assets/images/No_image_available.svg",
+      "company": "prueba",
+      "cover": "../../assets/images/no-image-available.jpg",
       "genre": "Adventures",
       "year": "2022",
       "platform": [
-        "PlayStation"
+        "PlayStation",
+        "PC"
       ],
       "id": 20
     },
     {
-      "title": "Prueba",
+      "title": "Prueba, sigo probando",
       "company": "asdas",
       "cover": "../../assets/images/no-image-available.jpg",
       "genre": "RPG",
@@ -162,19 +163,6 @@
         "PC"
       ],
       "id": 22
-    },
-    {
-      "title": "sadsad",
-      "company": "asdasd",
-      "cover": "../../assets/images/no-image-available.jpg",
-      "genre": "Action",
-      "year": "2010",
-      "platform": [
-        "PlayStation",
-        "Nintendo Switch",
-        "Xbox"
-      ],
-      "id": 23
     },
     {
       "title": "Resident Evil 4",
