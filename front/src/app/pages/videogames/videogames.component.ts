@@ -10,13 +10,26 @@ import { Router } from '@angular/router';
 })
 export class VideogamesComponent implements OnInit {
   public videogamesList: VideogamesInterface[] = [];
+  public inputSearch: string ='';
   
   constructor(private videogamesService: VideogamesService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getVideogames();
+  }
+
+  public getVideogames =() => {
     this.videogamesService.getVideogames().subscribe((data:any) =>{
       this.videogamesList = data;
     })
+  }
+
+  public filterVideogames =(filter: string) => {
+    if(filter === ''){
+      this.getVideogames();
+    } else {
+      this.videogamesList = this.videogamesList.filter(game => game.title.toLowerCase().includes(filter.toLowerCase()));
+    }
   }
 
   public selectedToEdit = (videogame:VideogamesInterface) => {
