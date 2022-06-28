@@ -2,6 +2,7 @@ import { VideogamesInterface } from './../../models/videogames.interfaces';
 import { Component, OnInit } from '@angular/core';
 import { VideogamesService } from 'src/app/services/videogames.service';
 import { Router } from '@angular/router';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-videogames',
@@ -11,6 +12,8 @@ import { Router } from '@angular/router';
 export class VideogamesComponent implements OnInit {
   public videogamesList: VideogamesInterface[] = [];
   public inputSearch: string = '';
+
+  
 
   constructor(
     private videogamesService: VideogamesService,
@@ -53,4 +56,11 @@ export class VideogamesComponent implements OnInit {
       );
     }
   };
+  public showPlay = (play: string) => {
+    if (play === '') {
+      this.showPlay
+    }else {
+      !this.showPlay
+    }
+  }
 }
