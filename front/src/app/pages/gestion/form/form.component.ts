@@ -58,6 +58,7 @@ export class FormComponent implements OnInit {
       cover: [this.newVideogame.cover,{ validator: Validators.required, updateOn: 'blur'}], //,[ Validators.required]],
       genre: [this.newVideogame.genre,[Validators.required]],
       year: [this.newVideogame.year,[Validators.required]],
+      play: [this.newVideogame.play],
       platform: new FormArray([])
     },
     {

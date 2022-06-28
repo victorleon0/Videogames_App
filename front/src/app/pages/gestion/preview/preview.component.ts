@@ -21,7 +21,8 @@ export class PreviewComponent implements OnInit {
       cover: '',
       platform: [],
       year: 0,
-      genre: ''
+      genre: '',
+      play: ''
     }
    }
 

@@ -97,9 +97,10 @@
         height: 300px;
         object-fit: cover;
     }
+    
     button {
         visibility: hidden;
-        width: 120px;
+        width: 70px;
         height: 30px;
         background-color: #77C3B1 ;
         box-shadow: #141515;
@@ -115,5 +116,10 @@
             visibility: visible;
         }
     }
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
