@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigatorInterface } from 'src/app/models/videogames.interfaces';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { NavigatorInterface } from 'src/app/models/videogames.interfaces';
 export class NavigatorComponent implements OnInit {
   public navbarInfo:NavigatorInterface;
 
-  constructor() {
+
+
+  constructor(public authService: AuthService) {
     this.navbarInfo={
       logo:{
         src:"../../../assets/iconsHeader",
@@ -34,6 +37,10 @@ export class NavigatorComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  public logout = () => {
+    this.authService.logOut();
   }
 
 }

@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { VideogamesComponent } from './pages/videogames/videogames.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'gestion',
-    component: GestionComponent,
+    component: GestionComponent, canActivate: [AuthGuard]
   },
   {
     path: 'login',

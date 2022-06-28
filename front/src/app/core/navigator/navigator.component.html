@@ -5,14 +5,20 @@
             <img src="../../../assets/controller.png" alt="logo videogame"/>
         </li>
         <li>
-            <a routerLink="/gestion">Gestión</a>
+            <a *ngIf="this.authService.isLoggedIn" routerLink="gestion">Gestion</a>
         </li>
         <li>
             <a routerLink="/videogames">Videogames</a>
         </li>
         <li>
-            <a routerLink="/login">Login</a>
+            <a *ngIf="!this.authService.isLoggedIn"  routerLink="login">Login</a>
+        </li>
+        <li *ngIf="this.authService.isLoggedIn">
+            <h2>Bienvenido admin</h2>
+            <button (click)="logout()"  type="button">Logout</button>
         </li>
     </ul>
 </nav>
 </div>
+
+
