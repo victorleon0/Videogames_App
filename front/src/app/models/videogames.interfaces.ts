@@ -27,4 +27,8 @@ export interface LinksInterface {
     link: string;
 }
 
-
+export interface UserInterface{
+  username:string;
+  email:string;
+  password:string;
+}
