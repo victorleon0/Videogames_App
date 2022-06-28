@@ -69,6 +69,7 @@
     flex-wrap: wrap;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 40px;
     justify-content: center;
 
     figure{
@@ -81,6 +82,15 @@
     width: 200px;
     background-color: rgba(78, 77, 77, 0.917);
     border-radius: 10px;
+
+    h4{
+        text-align: center;
+    }
+
+    .platform{
+        text-align: center;
+        font-size: 15px;
+    }
 
     img{
         width: 200px;
