@@ -128,19 +128,6 @@
       "id": 16
     },
     {
-      "title": "Prueba del validator",
-      "company": "prueba",
-      "cover": "../../assets/images/no-image-available.jpg",
-      "genre": "Adventures",
-      "year": "2022",
-      "play": "https://image.api.playstation.com/cdn/EP0006/CUSA00503_00/dp7IoaA4V6R4A8SadLvWzGk9ZDGSay7K.png",
-      "platform": [
-        "PlayStation",
-        "PC"
-      ],
-      "id": 20
-    },
-    {
       "title": "Los Sims 4",
       "company": "EA Games",
       "cover": "https://sm.ign.com/ign_es/game/l/los-sims-4/los-sims-4_c8f4.jpg",

@@ -13,7 +13,7 @@ import { validateYear, checkedRequired } from 'src/app/validators/form.validator
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  @Input() public errorCover!: boolean;
+ 
   public videogamesForm!: FormGroup;
   //ESta var se cargara con los valores iniciales en edicion
   public newVideogame = this.videogamesService.videogameData;
@@ -143,9 +143,9 @@ export class FormComponent implements OnInit {
   }
 
   //En vez de borrar directamente saca una ventana para que se confirme la seleccion
-  public confirmDelete = (gonnaDelete: boolean) => {
+  public confirmDelete = async(gonnaDelete: boolean) => {
     if(gonnaDelete){
-      this.videogamesService.deleteVideogame(this.idVideogame).subscribe();
+     await this.videogamesService.deleteVideogame(this.idVideogame).subscribe();
       this.videogamesService.videogameClear();
       this.router.navigate(['videogames']);
     }
