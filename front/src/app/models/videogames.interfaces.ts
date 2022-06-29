@@ -28,4 +28,10 @@ export interface LinksInterface {
     link: string;
 }
 
+export interface UserInterface {
+    email: string;
+    password: string;
+
+
+}
 
