@@ -1,0 +1,25 @@
+<form class="register"novalidate (ngSubmit)="onSubmit()" [formGroup]="userForm">
+    <h2>Register</h2>
+    <p>Disfruta de nuestras novedades y acumula punto con nosotros</p>
+    <fieldset class="login">
+      <label for="username">Username</label>
+      <input type="text"  id="username" formControlName="username"/>
+     </fieldset>
+     <fieldset class="login">
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email"/>
+     </fieldset>
+    <fieldset class="login">
+      <label for="password">Password</label>
+      <input type="text"  id="password" formControlName="password"/>
+    </fieldset>
+    <!--con el atributo [disabled] desactivamos el click hasta que se cumplan las validaciones del formulario-->
+   <button class="btn"type="submit"[disabled]="!userForm.valid">Register</button>
+   <div class="btn-remember">
+    <button class="btn">Remember me</button>
+    <a href="">Need help?</a>
+   </div>
+   <div class="link">
+    <p>First time on GamingHub?<a href="">Sign up.</a></p>
+   </div>
+  </form>

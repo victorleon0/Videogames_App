@@ -6,6 +6,7 @@ import { VideogamesComponent } from './pages/videogames/videogames.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
   }
 ];
 

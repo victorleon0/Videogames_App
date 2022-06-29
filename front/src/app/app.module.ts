@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './pages/gestion/form/form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthInterceptors } from './services/interceptors/authconfig.interceptor';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 
@@ -28,6 +29,7 @@ import { AuthInterceptors } from './services/interceptors/authconfig.interceptor
     PreviewComponent,
     FormComponent,
     LoginComponent,
+    RegisterComponent,
 
 
   ],

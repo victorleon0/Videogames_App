@@ -13,10 +13,14 @@
         <li>
             <a *ngIf="!this.authService.isLoggedIn"  routerLink="login">Login</a>
         </li>
-        <li *ngIf="this.authService.isLoggedIn">
-            <h2>Bienvenido admin</h2>
+        <li>
+            <a *ngIf="!this.authService.isLoggedIn" routerLink="register">Register</a>
+        </li>
+        <li *ngIf="this.authService.isLoggedIn" class="container-logout">
+            <h4>Bienvenido admin</h4>
             <button (click)="logout()"  type="button">Logout</button>
         </li>
+        
     </ul>
 </nav>
 </div>

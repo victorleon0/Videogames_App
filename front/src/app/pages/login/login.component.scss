@@ -1,6 +1,76 @@
-
-
-form{
-    display: flex;
-    flex-direction: column;
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vh;
+  margin: 10vh;
+  gap: 5px;
+  color: whitesmoke;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-password, .container-email{
+    display: flex;
+    width: 30vw;
+    margin-right: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    
+}
+
+.container-password{
+    margin-bottom: 20px;
+}
+
+label{
+    width: 30%;
+    font-size: 1.2rem;
+}
+
+input {
+  width:70%;  
+  align-self: flex-end;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  text-align: center;
+  
+}
+button{
+    width: 30%;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    margin:20px 5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+
+button:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
+

@@ -1,6 +1,7 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigatorInterface } from 'src/app/models/videogames.interfaces';
-import { AuthService } from 'src/app/services/auth.service';
+
 
 
 @Component({
